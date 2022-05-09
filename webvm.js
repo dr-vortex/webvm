@@ -1,6 +1,6 @@
 class WebVM{
 	static get version(){
-		return '0.1'
+		return '0.1.0'
 	}
 	static get _generateID(){
 		return Math.random().toString(16).slice(2)
