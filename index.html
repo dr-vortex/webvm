@@ -25,16 +25,20 @@
 		<canvas id=vm-screen></canvas>
 		<script src=webvm.js></script>
 		<script>
-			const canvas = document.querySelector('#vm-screen');
 			let vm;
 			WebVM.ready.then(e => {
 				if(localStorage.vmStorage){
-					vm = new WebVM();
+					vm = new WebVM({
+						display: document.querySelector('#vm-screen')
+					});
 					WebVM.Storage.load(localStorage.vmStorage, vm).then(storage => {
 						vm.start();
 					});
 				}else{
-					vm = new WebVM({storage: 2**16});
+					vm = new WebVM({
+						display: document.querySelector('#vm-screen'),
+						storage: 2**16
+					});
 					localStorage.vmStorage = vm.storage[0].id;
 					vm.start();
 				}

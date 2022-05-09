@@ -106,7 +106,7 @@ class WebVM{
 			}
 			instruction = [
 				a => null,
-				(a, b) => a += b,
+				(a, b) => b += a,
 				(a, b) => b = a,
 
 			]
