@@ -2,9 +2,11 @@
 
 WebVM is a virtual machine (VM) implementation in Javascript.  It allows you to simulate hardware, in a web environment. You could (with some effort), run Windows or Linux on WebVM.
 
-WebVM is a small project I've worked on for a couple weeks. Hopefully someone finds this usful.
+### Arcive Note
 
-### Documentation
+WebVM is discontinued due to lack of support and significanty better pre-existing emulators.
+
+## Documentation
 
 #### Creating, starting, and stopping a VM
 
